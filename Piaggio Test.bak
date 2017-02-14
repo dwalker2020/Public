@@ -1,0 +1,284 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L LMC6062 U1
+U 1 1 58A35FCC
+P 5500 2700
+F 0 "U1" H 5500 2900 50  0000 L CNN
+F 1 "LMC6062" H 5500 2500 50  0000 L CNN
+F 2 "" H 5500 2700 50  0000 C CNN
+F 3 "" H 5500 2700 50  0000 C CNN
+	1    5500 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X06 P1
+U 1 1 58A36612
+P 1400 2450
+F 0 "P1" H 1400 2800 50  0000 C CNN
+F 1 "CONN_01X06" V 1500 2450 50  0000 C CNN
+F 2 "" H 1400 2450 50  0000 C CNN
+F 3 "" H 1400 2450 50  0000 C CNN
+	1    1400 2450
+	-1   0    0    1   
+$EndComp
+Text Label 1700 2700 0    60   ~ 0
+Vin
+Text Label 1700 2600 0    60   ~ 0
+GND
+Text Label 1700 2500 0    60   ~ 0
+Vout
+Text Label 1700 2400 0    60   ~ 0
+GND
+Text Label 1700 2200 0    60   ~ 0
+GND
+Text Label 1700 2300 0    60   ~ 0
+5VDC
+$Comp
+L GND #PWR01
+U 1 1 58A36AB3
+P 5400 3050
+F 0 "#PWR01" H 5400 2800 50  0001 C CNN
+F 1 "GND" H 5400 2900 50  0000 C CNN
+F 2 "" H 5400 3050 50  0000 C CNN
+F 3 "" H 5400 3050 50  0000 C CNN
+	1    5400 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR02
+U 1 1 58A36AFF
+P 2150 2950
+F 0 "#PWR02" H 2150 2700 50  0001 C CNN
+F 1 "GND" H 2150 2800 50  0000 C CNN
+F 2 "" H 2150 2950 50  0000 C CNN
+F 3 "" H 2150 2950 50  0000 C CNN
+	1    2150 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 2700 1900 2700
+Wire Wire Line
+	1600 2200 2150 2200
+Wire Wire Line
+	2150 2200 2150 2950
+Wire Wire Line
+	1600 2400 2150 2400
+Connection ~ 2150 2400
+Wire Wire Line
+	1600 2600 2150 2600
+Connection ~ 2150 2600
+Wire Wire Line
+	1600 2300 1900 2300
+Wire Wire Line
+	1600 2500 1900 2500
+Text Notes 1400 2050 0    60   ~ 0
+IO Connector
+$Comp
+L +5V #PWR03
+U 1 1 58A36E9F
+P 5400 2350
+F 0 "#PWR03" H 5400 2200 50  0001 C CNN
+F 1 "+5V" H 5400 2490 50  0000 C CNN
+F 2 "" H 5400 2350 50  0000 C CNN
+F 3 "" H 5400 2350 50  0000 C CNN
+	1    5400 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR04
+U 1 1 58A36ECF
+P 1900 2300
+F 0 "#PWR04" H 1900 2150 50  0001 C CNN
+F 1 "+5V" H 1900 2440 50  0000 C CNN
+F 2 "" H 1900 2300 50  0000 C CNN
+F 3 "" H 1900 2300 50  0000 C CNN
+	1    1900 2300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5400 2400 5400 2350
+Wire Wire Line
+	5400 3000 5400 3050
+$Comp
+L POT_Dual RV1
+U 1 1 58A37145
+P 4000 2700
+F 0 "RV1" H 4000 2450 50  0000 C CNN
+F 1 "5k DUAL" H 4000 2400 50  0000 C TNN
+F 2 "" H 4250 2625 50  0000 C CNN
+F 3 "" H 4250 2625 50  0000 C CNN
+	1    4000 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3600 2800 3200 2800
+Wire Wire Line
+	3750 2600 3750 2500
+Wire Wire Line
+	3750 2500 4050 2500
+Wire Wire Line
+	4050 2500 4050 2800
+Wire Wire Line
+	4050 2800 4100 2800
+Wire Wire Line
+	4250 2600 5200 2600
+Wire Wire Line
+	3900 2500 3900 1800
+Wire Wire Line
+	3900 1800 5200 1800
+Connection ~ 3900 2500
+$Comp
+L C C2
+U 1 1 58A374D5
+P 5350 1800
+F 0 "C2" V 5450 1500 50  0000 L CNN
+F 1 "0.1uF" V 5550 1500 50  0000 L CNN
+F 2 "" H 5388 1650 50  0000 C CNN
+F 3 "" H 5350 1800 50  0000 C CNN
+	1    5350 1800
+	0    1    1    0   
+$EndComp
+$Comp
+L C C1
+U 1 1 58A37542
+P 4700 2900
+F 0 "C1" H 4725 3000 50  0000 L CNN
+F 1 "0.1uF" H 4725 2800 50  0000 L CNN
+F 2 "" H 4738 2750 50  0000 C CNN
+F 3 "" H 4700 2900 50  0000 C CNN
+	1    4700 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R1
+U 1 1 58A375DF
+P 5050 3650
+F 0 "R1" H 4900 3700 50  0000 C CNN
+F 1 "3.3k" H 4900 3600 50  0000 C CNN
+F 2 "" V 4980 3650 50  0000 C CNN
+F 3 "" H 5050 3650 50  0000 C CNN
+	1    5050 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 1800 6000 1800
+Wire Wire Line
+	6000 1800 6000 2700
+Wire Wire Line
+	5800 2700 6450 2700
+Connection ~ 6000 2700
+Connection ~ 5950 2700
+Wire Wire Line
+	5050 3500 5800 3500
+Wire Wire Line
+	5200 2800 5050 2800
+Wire Wire Line
+	5050 2800 5050 3500
+Wire Wire Line
+	5050 3900 5050 3800
+Wire Wire Line
+	4700 3050 4700 3900
+Wire Wire Line
+	3200 3900 6450 3900
+Wire Wire Line
+	4900 3900 4900 4050
+Connection ~ 4900 3900
+Connection ~ 4700 3900
+Connection ~ 5050 3900
+$Comp
+L GND #PWR05
+U 1 1 58A37EC8
+P 4900 4050
+F 0 "#PWR05" H 4900 3800 50  0001 C CNN
+F 1 "GND" H 4900 3900 50  0000 C CNN
+F 2 "" H 4900 4050 50  0000 C CNN
+F 3 "" H 4900 4050 50  0000 C CNN
+	1    4900 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 2750 4700 2600
+Connection ~ 4700 2600
+Wire Wire Line
+	5950 2700 5950 3350
+Text Label 3200 2800 0    60   ~ 0
+Vin
+Text Label 6250 2700 0    60   ~ 0
+Vout
+Text Label 3200 3900 0    60   ~ 0
+GND
+Text Label 6300 3900 0    60   ~ 0
+GND
+$Comp
+L POT_TRIM RV2
+U 1 1 58A39BF6
+P 5950 3500
+F 0 "RV2" V 5850 3500 50  0000 C CNN
+F 1 "10k Trim" V 5750 3500 50  0000 C CNN
+F 2 "" H 5950 3500 50  0000 C CNN
+F 3 "" H 5950 3500 50  0000 C CNN
+	1    5950 3500
+	0    -1   -1   0   
+$EndComp
+Text Notes 4500 1350 0    60   ~ 12
+Second Order Low Pass\nCutoff Frequency (Fc) = 50-400 Hz\nGain = 1-3
+Text Notes 6050 3400 0    60   ~ 12
+Gain Adj
+Text Notes 3800 3200 0    60   ~ 12
+Freq Adj
+Text Notes 7400 7500 0    60   ~ 12
+Piaggio Fast Forward Design Test
+Text Notes 8150 7650 0    60   ~ 12
+2/14/2017
+Text Notes 10600 7650 0    60   ~ 12
+X1
+Text Notes 7300 7200 0    60   ~ 12
+1
+Text Notes 7400 7250 0    60   ~ 12
+1
+Text Notes 8200 7300 0    60   ~ 12
+Designer: Devin Walker
+$EndSCHEMATC

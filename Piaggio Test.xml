@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>C:\Users\xbox_000\Documents\KiCad Projects\Piaggio Test\Piaggio Test.sch</source>
+    <date>2/14/2017 5:51:29 PM</date>
+    <tool>Eeschema 4.0.5</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>Piaggio Test.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="U1">
+      <value>LMC6062</value>
+      <footprint>SMD_Packages:SOIC-8-N</footprint>
+      <libsource lib="linear" part="LMC6062"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58A35FCC</tstamp>
+    </comp>
+    <comp ref="RV1">
+      <value>10k DUAL</value>
+      <footprint>Potentiometers:Potentiometer_Alps_RK097_Double_Vertical</footprint>
+      <libsource lib="device" part="POT_Dual"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58A37145</tstamp>
+    </comp>
+    <comp ref="C2">
+      <value>0.47uF</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58A374D5</tstamp>
+    </comp>
+    <comp ref="C1">
+      <value>0.47uF</value>
+      <footprint>Capacitors_SMD:C_0603</footprint>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58A37542</tstamp>
+    </comp>
+    <comp ref="R1">
+      <value>3.3k</value>
+      <footprint>Resistors_SMD:R_0402</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58A375DF</tstamp>
+    </comp>
+    <comp ref="RV2">
+      <value>10k Trim</value>
+      <footprint>Potentiometers:Potentiometer_Trimmer_Bourns_3006P</footprint>
+      <libsource lib="device" part="POT_TRIM"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58A39BF6</tstamp>
+    </comp>
+    <comp ref="J1">
+      <value>Screw_Terminal_1x06</value>
+      <footprint>Connectors_Terminal_Blocks:TerminalBlock_Pheonix_PT-3.5mm_6pol</footprint>
+      <libsource lib="conn" part="Screw_Terminal_1x06"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58A3BC3A</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="device" part="C">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C?</fp>
+        <fp>C_????_*</fp>
+        <fp>C_????</fp>
+        <fp>SMD*_c</fp>
+        <fp>Capacitor*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="linear" part="LM358">
+      <aliases>
+        <alias>LMC6062</alias>
+        <alias>LMC6082</alias>
+        <alias>LM358N</alias>
+        <alias>TL072</alias>
+        <alias>TL082</alias>
+        <alias>NE5532</alias>
+        <alias>4558</alias>
+      </aliases>
+      <description>Dual Op amp (low power)</description>
+      <docs>ns/lm158.pdf</docs>
+      <footprints>
+        <fp>SOIC*</fp>
+        <fp>DIP*</fp>
+        <fp>TSSOP*</fp>
+        <fp>TO-99*</fp>
+        <fp>DSBGA*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">LM358</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="output"/>
+        <pin num="2" name="-" type="input"/>
+        <pin num="3" name="+" type="input"/>
+        <pin num="4" name="V-" type="power_in"/>
+        <pin num="5" name="+" type="input"/>
+        <pin num="6" name="-" type="input"/>
+        <pin num="7" name="~" type="output"/>
+        <pin num="8" name="V+" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="POT_Dual">
+      <description>Dual Potentionmeter</description>
+      <fields>
+        <field name="Reference">RV</field>
+        <field name="Value">POT_Dual</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+        <pin num="5" name="5" type="passive"/>
+        <pin num="6" name="6" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="POT_TRIM">
+      <description>Trim-Potentionmeter</description>
+      <fields>
+        <field name="Reference">RV</field>
+        <field name="Value">POT_TRIM</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="R">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+        <fp>Resistor_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="conn" part="Screw_Terminal_1x06">
+      <description>6-pin screw terminal connector</description>
+      <footprints>
+        <fp>bornier6</fp>
+        <fp>TerminalBlock*6pol</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Screw_Terminal_1x06</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+        <pin num="3" name="~" type="passive"/>
+        <pin num="4" name="~" type="passive"/>
+        <pin num="5" name="~" type="passive"/>
+        <pin num="6" name="~" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="device">
+      <uri>C:\Program Files\KiCad\share\kicad\library\device.lib</uri>
+    </library>
+    <library logical="conn">
+      <uri>C:\Program Files\KiCad\share\kicad\library\conn.lib</uri>
+    </library>
+    <library logical="linear">
+      <uri>C:\Program Files\KiCad\share\kicad\library\linear.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="Net-(R1-Pad1)">
+      <node ref="RV2" pin="1"/>
+      <node ref="U1" pin="2"/>
+      <node ref="R1" pin="1"/>
+    </net>
+    <net code="2" name="Net-(RV2-Pad3)">
+      <node ref="RV2" pin="3"/>
+    </net>
+    <net code="3" name="GND">
+      <node ref="J1" pin="5"/>
+      <node ref="J1" pin="3"/>
+      <node ref="J1" pin="1"/>
+      <node ref="U1" pin="4"/>
+      <node ref="R1" pin="2"/>
+      <node ref="C1" pin="2"/>
+    </net>
+    <net code="4" name="/Vout">
+      <node ref="U1" pin="1"/>
+      <node ref="RV2" pin="2"/>
+      <node ref="J1" pin="4"/>
+      <node ref="C2" pin="1"/>
+    </net>
+    <net code="5" name="/Vin">
+      <node ref="RV1" pin="1"/>
+      <node ref="J1" pin="6"/>
+    </net>
+    <net code="6" name="+5V">
+      <node ref="J1" pin="2"/>
+      <node ref="U1" pin="8"/>
+    </net>
+    <net code="7" name="Net-(C1-Pad1)">
+      <node ref="RV1" pin="5"/>
+      <node ref="C1" pin="1"/>
+      <node ref="U1" pin="3"/>
+    </net>
+    <net code="8" name="Net-(C2-Pad2)">
+      <node ref="RV1" pin="2"/>
+      <node ref="C2" pin="2"/>
+      <node ref="RV1" pin="4"/>
+    </net>
+    <net code="9" name="Net-(RV1-Pad6)">
+      <node ref="RV1" pin="6"/>
+    </net>
+    <net code="10" name="Net-(RV1-Pad3)">
+      <node ref="RV1" pin="3"/>
+    </net>
+  </nets>
+</export>
